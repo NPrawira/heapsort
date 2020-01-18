@@ -42,9 +42,9 @@ public class heapsort {
     }
  
     public static void main(String[] args) {
-        int[] arr = new int[20];
+        int[] arr = new int[25];
         Random random = new Random();
-        for(int a=0; a<20; a++){
+        for(int a=0; a<25; a++){
         	arr[a] = random.nextInt(100);	
         }
         System.out.println("Before Heap Sort: ");
