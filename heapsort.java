@@ -9,13 +9,13 @@ public class heapsort {
     }
 
     public static void heapify(int[] arr, int i,int size) { 
-        int left = 2*i+1, right = 2*i+2, max;
-        if(left <= size && arr[left] > arr[i]) {
+        int left = 2*i+2, right = 2*i+1, max;
+        if(left <= size && arr[left] < arr[i]) {
             max = left;
         } else {
             max = i;
         }
-        if(right <= size && arr[right] > arr[max]) {
+        if(right <= size && arr[right] < arr[max]) {
             max = right;
         }
         if(max != i) {
@@ -42,9 +42,9 @@ public class heapsort {
     }
  
     public static void main(String[] args) {
-        int[] arr = new int[15];
+        int[] arr = new int[20];
         Random random = new Random();
-        for(int a=0; a<15; a++){
+        for(int a=0; a<20; a++){
         	arr[a] = random.nextInt(100);	
         }
         System.out.println("Before Heap Sort: ");
